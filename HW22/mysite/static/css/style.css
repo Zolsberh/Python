@@ -1,0 +1,36 @@
+body{
+    background: #8EE4AF;
+    margin: 0;
+    padding: 0;
+}
+
+.menu{
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    background: #5CDB95;
+    padding: 20px;
+    margin-top: 0;
+}
+
+.content{
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 20px;
+    box-sizing: border-box;
+    color: #EDF5E1;
+}
+
+.menu-item{
+    text-decoration: none;
+    color: #05386B;
+    background-color: #70c4b3;
+    border-style: solid;
+    border-color:  #379683;
+    border-radius: 15px;
+    padding: 10px;
+}
+
+.menu-item:hover{
+    background-color: #379683;
+}
