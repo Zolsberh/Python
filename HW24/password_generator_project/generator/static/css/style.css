@@ -1,0 +1,21 @@
+body{
+    background: grey;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    max-width: 1200px;
+}
+
+.container{
+    width: 400px;
+    margin: 0 auto;
+}
+
+.container h1{
+    text-align: center;
+}
+
+.container form, h2, article{
+    background: rgb(111, 202, 139);
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 6px;
+}
