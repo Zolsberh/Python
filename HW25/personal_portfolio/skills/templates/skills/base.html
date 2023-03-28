@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="icon" href="{% static 'skills/favicon.ico' %}" type="image/favicon.ico">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+  <div class="logo">
+      <img src="{% static 'skills/logo.png' %}" alt="">
+  </div>
+  <div class="content">
+    <div class="wrap">
+      {% block content %}
+      {% endblock %}
+    </div>
+  </div>
+</body>
+</html>
