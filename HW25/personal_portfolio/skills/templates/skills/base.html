@@ -5,12 +5,43 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link rel="icon" href="{% static 'skills/favicon.ico' %}" type="image/favicon.ico">
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css">
 </head>
 <body>
-  <div class="logo">
-      <img src="{% static 'skills/logo.png' %}" alt="">
-  </div>
+
+  {% if user.is_authenticated %}
+      <div class="menu">
+        <div class="wrap">
+            <ul>
+                <li class="logo">
+                    <img src="{% static 'skills/logo.png' %}" alt="">
+                </li>
+                <li class="user">Пользователь: {{ user.username }}</li>
+                <li>
+                    <form action="{% url 'logoutuser' %}" method="post">
+                        {% csrf_token %}
+                        <button class="top">Выйти</button>
+                    </form>
+                </li>
+            </ul>
+        </div>
+      </div>
+  {% else %}
+      <div class="menu">
+        <div class="wrap">
+            <ul>
+                <li class="logo">
+                    <a href="{% url 'home' %}">
+                    <img src="{% static 'skills/logo.png' %}" alt="">
+                    </a>
+                </li>
+                <li><a href="{% url 'signupuser' %}">Зарегистрироваться</a></li>
+                <li><a href="{% url 'loginuser' %}">Войти</a></li>
+            </ul>
+        </div>
+      </div>
+  {% endif %}
+
   <div class="content">
     <div class="wrap">
       {% block content %}
